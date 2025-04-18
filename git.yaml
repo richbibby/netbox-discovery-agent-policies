@@ -2,7 +2,6 @@ orb:
   labels:
     environment: lab
     purpose: webinar
-    demo: true
   config_manager:
     active: git
     sources:
