@@ -4,10 +4,10 @@ device_discovery:
       defaults:
         device:
           description: "Discovered by NetBox Discovery agent"
-          tags:
-            - device-discovery
-          site: Lab Network
-          role: Lab Device
+        site: Lab Network
+        role: Lab Device
+        tags:
+          - device-discovery
     scope:
       - hostname: 172.24.0.100
         username: "${SSH_USERNAME}"
