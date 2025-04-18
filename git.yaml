@@ -10,6 +10,8 @@ orb:
         schedule: "* * * * *"  # Check for updates every minute
         branch: main
   backends:
+    network_discovery:
+    device_discovery:
     common:
       diode:
         target: ${DIODE_TARGET}
