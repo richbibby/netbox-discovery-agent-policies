@@ -2,26 +2,29 @@ device_discovery:
   lab_network:
     config:
       defaults:
-        description: "Discovered by NetBox Discovery agent"
-        tags:
-          - device-discovery
-        site: Lab Network
+        device:
+          description: "Discovered by NetBox Discovery agent"
+          tags:
+            - device-discovery
+          site: Lab Network
+          # role: WAN Router
     scope:
       - hostname: 172.24.0.100
-        role: WAN Router
         username: "${SSH_USERNAME}"
         password: "${SSH_PASSWORD}"
       - driver: eos
         hostname: 172.24.0.101
-        role: Access Switch
         username: "${SSH_USERNAME}"
         password: "${SSH_PASSWORD}"
+        device:
+          role: Access Switch
         optional_args:
           transport: ssh
       - driver: eos
         hostname: 172.24.0.102
-        role: Access Switch
         username: "${SSH_USERNAME}"
         password: "${SSH_PASSWORD}"
+        device:
+          role: Access Switch
         optional_args:
           transport: ssh
