@@ -5,4 +5,7 @@ webinar_demo:
   policies:
     network_discovery:
       path: policies/network-discovery.yaml
+      enabled: false
+    device_discovery:
+      path: policies/device-discovery.yaml
       enabled: true

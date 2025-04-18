@@ -1,0 +1,22 @@
+device_discovery:
+  lab_network:
+    config:
+      defaults:
+        site: Lab Network
+        role: Lab Router
+    scope:
+      - hostname: 172.24.0.100
+        username: admin
+        password: admin
+      - driver: eos
+        hostname: 172.24.0.101
+        username: admin
+        password: admin
+        optional_args:
+          transport: ssh
+      - driver: eos
+        hostname: 172.24.0.102
+        username: admin
+        password: admin
+        optional_args:
+          transport: ssh
