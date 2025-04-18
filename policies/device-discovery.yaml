@@ -6,7 +6,7 @@ device_discovery:
           description: "Discovered by NetBox Discovery agent"
           tags:
             - device-discovery
-        site: Lab Network
+        site: Lab
         role: Lab Device
 
     scope:
