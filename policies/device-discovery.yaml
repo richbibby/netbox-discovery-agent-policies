@@ -3,20 +3,18 @@ device_discovery:
     config:
       defaults:
         site: Lab Network
-        role: Lab Router
+        username: "${SSH_USERNAME}"
+        password: "${SSH_PASSWORD}"
     scope:
       - hostname: 172.24.0.100
-        username: admin
-        password: admin
+        role: WAN Router
       - driver: eos
         hostname: 172.24.0.101
-        username: admin
-        password: admin
+        role: Access Switch
         optional_args:
           transport: ssh
       - driver: eos
         hostname: 172.24.0.102
-        username: admin
-        password: admin
+        role: Access Switch
         optional_args:
           transport: ssh
