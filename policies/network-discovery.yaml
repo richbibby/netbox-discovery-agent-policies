@@ -9,6 +9,6 @@
               - network-discovery
         scope:
           targets:
-            - 172.17.0.0/24
+            - 172.24.0.0/24
           fast_mode: True
           timing: 5
