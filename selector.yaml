@@ -1,0 +1,8 @@
+webinar_demo:
+  selector:
+    environment: lab
+    purpose: webinar
+  policies:
+    network_discovery:
+      path: policies/network-discovery.yaml
+      enabled: true

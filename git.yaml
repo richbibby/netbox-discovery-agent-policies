@@ -1,0 +1,17 @@
+orb:
+  labels:
+    environment: lab
+    purpose: webinar
+  config_manager:
+    active: git
+    sources:
+      git:
+        url: "https://github.com/your-org/policy-repo"
+        schedule: "* * * * *"  # Check for updates every minute
+        branch: main
+  backends:
+    common:
+      diode:
+        target: ${DIODE_TARGET}
+        api_key: ${DIODE_API_KEY}
+        agent_name: webinar-demo-agent
