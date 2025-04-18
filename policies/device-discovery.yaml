@@ -6,18 +6,22 @@ device_discovery:
         tags:
           - device-discovery
         site: Lab Network
-        username: "${SSH_USERNAME}"
-        password: "${SSH_PASSWORD}"
     scope:
       - hostname: 172.24.0.100
         role: WAN Router
+        username: "${SSH_USERNAME}"
+        password: "${SSH_PASSWORD}"
       - driver: eos
         hostname: 172.24.0.101
         role: Access Switch
+        username: "${SSH_USERNAME}"
+        password: "${SSH_PASSWORD}"
         optional_args:
           transport: ssh
       - driver: eos
         hostname: 172.24.0.102
         role: Access Switch
+        username: "${SSH_USERNAME}"
+        password: "${SSH_PASSWORD}"
         optional_args:
           transport: ssh
