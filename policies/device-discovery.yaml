@@ -2,6 +2,9 @@ device_discovery:
   lab_network:
     config:
       defaults:
+        description: "Discovered by NetBox Discovery agent"
+        tags:
+          - device-discovery
         site: Lab Network
         username: "${SSH_USERNAME}"
         password: "${SSH_PASSWORD}"
