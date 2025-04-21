@@ -1,7 +1,7 @@
 network_discovery:
   lab_network:
     config:
-      schedule: "* * * * 5"
+      schedule: "* * * * *"
       timeout: 5
       defaults:
         description: "Discovered by NetBox Discovery agent"
