@@ -22,4 +22,4 @@ agent_3_mist_worker:
     environment: lab
   policies:
     mist_worker:
-      path: policies/mist-worker-policy.yaml
+      path: policies/mist-discovery-policy.yaml
