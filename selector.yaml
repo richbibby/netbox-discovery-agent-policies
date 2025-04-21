@@ -4,7 +4,7 @@ agent_1_network:
     environment: lab
   policies:
     network_discovery:
-      path: policies/network-discovery.yaml
+      path: policies/network-discovery-policy.yaml
       enabled: true
 
 agent_2_device:
@@ -13,7 +13,7 @@ agent_2_device:
     environment: lab
   policies:
     device_discovery:
-      path: policies/device-discovery.yaml
+      path: policies/device-discovery-policy.yaml
       enabled: true
 
 agent_3_mist_worker:
