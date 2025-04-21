@@ -1,16 +1,24 @@
-# Example Commands to Start Agents
+# Commands to Start Orb Agents for NetBox Discovery
 
-## running a network discovery
-docker run -u root --rm -v ${PWD}:/opt/orb/ -e DIODE_API_KEY netboxlabs/orb-agent:develop run -c /opt/orb/network.yaml
+## Network Discovery Agent
+docker run -u root --rm \
+  -v ${PWD}:/opt/orb/ \
+  -e DIODE_API_KEY \
+  netboxlabs/orb-agent:develop run -c /opt/orb/network-discovery.yaml
 
-## running a device discoery
-docker run -u root --rm -v ${PWD}:/opt/orb/ -e DIODE_API_KEY netboxlabs/orb-agent:develop run -c /opt/orb/device.yaml
+## Device Discovery Agent
+docker run -u root --rm \
+  -v ${PWD}:/opt/orb/ \
+  -e DIODE_API_KEY \
+  -e SSH_USERNAME \
+  -e SSH_PASSWORD \
+  netboxlabs/orb-agent:develop run -c /opt/orb/device-discovery.yaml
 
-## running from git policy
-docker run -u root --rm -v ${PWD}:/opt/orb/ -e DIODE_API_KEY netboxlabs/orb-agent:develop run -c /opt/orb/git.yaml
-
-## running a custom worker
-docker run -u root --rm -v ${PWD}:/opt/orb/ -e DIODE_API_KEY -e INSTALL_DRIVERS_PATH=/opt/orb/workers.txt netboxlabs/orb-agent:develop run -c /opt/orb/worker.yaml
-
-## running the MIST worker
-docker run -u root --rm -v ${PWD}:/opt/orb/ -e DIODE_API_KEY -e MIST_APITOKEN -e MIST_ORG_ID -e INSTALL_DRIVERS_PATH=/opt/orb/workers.txt netboxlabs/orb-agent:develop run -c /opt/orb/worker.yaml
+## Juniper MIST Worker Discovery Agent
+docker run -u root --rm \
+  -v ${PWD}:/opt/orb/ \
+  -e DIODE_API_KEY \
+  -e MIST_APITOKEN \
+  -e MIST_ORG_ID \
+  -e INSTALL_DRIVERS_PATH=/opt/orb/workers.txt \
+  netboxlabs/orb-agent:develop run -c /opt/orb/mist-discovery.yaml
