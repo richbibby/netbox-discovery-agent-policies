@@ -1,0 +1,3 @@
+# Ignore nb-mist-worker directory and its contents
+nb-mist-worker/
+nb-mist-worker/**
