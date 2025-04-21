@@ -15,3 +15,11 @@ agent_2_device:
     device_discovery:
       path: policies/device-discovery.yaml
       enabled: true
+
+agent_3_mist_worker:
+  selector:
+    agent: mist-worker
+    environment: lab
+  policies:
+    mist_worker:
+      path: policies/mist-worker-policy.yaml
