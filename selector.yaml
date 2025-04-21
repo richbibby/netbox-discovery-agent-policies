@@ -1,11 +1,17 @@
-webinar_demo:
+agent_1_network:
   selector:
+    agent: network
     environment: lab
-    purpose: webinar
   policies:
     network_discovery:
       path: policies/network-discovery.yaml
-      enabled: false
+      enabled: true
+
+agent_2_device:
+  selector:
+    agent: device
+    environment: lab
+  policies:
     device_discovery:
       path: policies/device-discovery.yaml
       enabled: true

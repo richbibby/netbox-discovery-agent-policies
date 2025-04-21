@@ -1,0 +1,17 @@
+orb:
+  labels:
+    agent: device
+    environment: lab
+  config_manager:
+    active: git
+    sources:
+      git:
+        url: "https://github.com/your-org/policy-repo"
+        schedule: "* * * * *"  # Check for updates every minute
+        branch: main
+  backends:
+    common:
+      diode:
+        target: grpc://webinar.netboxlabs.tech:8080/diode
+        api_key: "${DIODE_API_KEY}"
+        agent_name: agent_2_device
