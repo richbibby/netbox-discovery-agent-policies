@@ -1,6 +1,7 @@
 device_discovery:
   lab_network:
     config:
+      schedule: "* * * * *"
       defaults:
         device:
           description: "Discovered by NetBox Discovery agent"
