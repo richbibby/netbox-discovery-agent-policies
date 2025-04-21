@@ -25,11 +25,3 @@ device_discovery:
         password: "${SSH_PASSWORD}"
         optional_args:
           transport: ssh
-      - driver: srl
-        hostname: 172.24.0.103
-        username: "${SSH_USERNAME}"
-        password: "${SSH_PASSWORD}"
-        optional_args:
-          transport: ssh
-          port: 22
-          platform: srl
