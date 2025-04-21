@@ -10,6 +10,7 @@ orb:
         schedule: "* * * * *"  # Check for updates every minute
         branch: main
   backends:
+    device_discovery:
     common:
       diode:
         target: grpc://webinar.netboxlabs.tech:8080/diode

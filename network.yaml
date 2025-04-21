@@ -6,10 +6,11 @@ orb:
     active: git
     sources:
       git:
-        url: ""https://github.com/richbibby/netbox-discovery-agent-policies"
+        url: "https://github.com/richbibby/netbox-discovery-agent-policies"
         schedule: "* * * * *"  # Check for updates every minute
         branch: main
   backends:
+    network_discovery:
     common:
       diode:
         target: grpc://webinar.netboxlabs.tech:8080/diode
