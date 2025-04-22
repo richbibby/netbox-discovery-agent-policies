@@ -1,1 +1,2 @@
+./worker-example
 ./nbl-mist-worker

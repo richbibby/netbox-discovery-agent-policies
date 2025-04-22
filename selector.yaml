@@ -1,4 +1,4 @@
-agent_1_network:
+agent_1:
   selector:
     agent: network
     environment: lab
@@ -7,7 +7,7 @@ agent_1_network:
       path: policies/network-discovery-policy.yaml
       enabled: true
 
-agent_2_device:
+agent_2:
   selector:
     agent: device
     environment: lab
@@ -16,10 +16,20 @@ agent_2_device:
       path: policies/device-discovery-policy.yaml
       enabled: true
 
-agent_3_mist_worker:
+agent_3:
+  selector:
+    agent: example-worker
+    environment: demo
+  policies:
+    example_worker:
+      path: policies/worker-discovery-policy.yaml
+      enabled: true
+
+agent_4:
   selector:
     agent: mist-worker
     environment: lab
   policies:
     mist_worker:
       path: policies/mist-discovery-policy.yaml
+      enabled: true

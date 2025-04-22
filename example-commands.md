@@ -18,6 +18,9 @@ docker run -u root --rm \
   netboxlabs/orb-agent:develop run -c /opt/orb/device-discovery.yaml
 ```
 
+## Custom Worker Discovery Agent
+docker run -u root --rm -v ${PWD}:/opt/orb/ -e DIODE_API_KEY -e INSTALL_DRIVERS_PATH=/opt/orb/workers.txt netboxlabs/orb-agent:develop run -c /opt/orb/worker-discovery.yaml
+
 ## Juniper MIST Worker Discovery Agent
 ```
 docker run -u root --rm \
