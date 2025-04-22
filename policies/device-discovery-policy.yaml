@@ -22,9 +22,9 @@ device_discovery:
         password: "${SSH_PASSWORD}"
         optional_args:
           transport: ssh
-      # - driver: eos
-      #   hostname: 172.24.0.103
-      #   username: "${SSH_USERNAME}"
-      #   password: "${SSH_PASSWORD}"
-      #   optional_args:
-      #     transport: ssh
+      - driver: eos
+        hostname: 172.24.0.103
+        username: "${SSH_USERNAME}"
+        password: "${SSH_PASSWORD}"
+        optional_args:
+          transport: ssh
