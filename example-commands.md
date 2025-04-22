@@ -22,14 +22,3 @@ docker run -u root --rm \
 ```
 docker run -u root --rm -v ${PWD}:/opt/orb/ -e DIODE_API_KEY -e INSTALL_DRIVERS_PATH=/opt/orb/workers.txt netboxlabs/orb-agent:develop run -c /opt/orb/worker-discovery.yaml
 ```
-
-## Juniper MIST Worker Discovery Agent
-```
-docker run -u root --rm \
-  -v ${PWD}:/opt/orb/ \
-  -e DIODE_API_KEY \
-  -e MIST_APITOKEN \
-  -e MIST_ORG_ID \
-  -e INSTALL_DRIVERS_PATH=/opt/orb/workers.txt \
-  netboxlabs/orb-agent:develop run -c /opt/orb/mist-discovery.yaml
-```
