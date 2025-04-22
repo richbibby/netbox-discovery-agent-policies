@@ -1,7 +1,7 @@
 orb:
   labels:
-    agent: mist-worker
     environment: lab
+    color: green
   config_manager:
     active: git
     sources:

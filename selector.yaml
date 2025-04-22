@@ -2,8 +2,8 @@
 # Scans and discovers networks
 agent01:
   selector:
-    agent: network
     environment: lab
+    color: red
   policies:
     network_discovery:
       path: policies/network-discovery-policy.yaml
@@ -13,8 +13,8 @@ agent01:
 # Collects detailed information about discovered devices
 agent02:
   selector:
-    agent: device
     environment: lab
+    color: blue
   policies:
     device_discovery:
       path: policies/device-discovery-policy.yaml
@@ -24,8 +24,8 @@ agent02:
 # Demonstrates custom worker functionality
 agent03:
   selector:
-    agent: example-worker
     environment: demo
+    color: yellow
   policies:
     example_worker:
       path: policies/worker-discovery-policy.yaml
@@ -35,8 +35,8 @@ agent03:
 # Specialized worker for Juniper Mist Controller discovery
 agent04:
   selector:
-    agent: mist-worker
     environment: lab
+    color: green
   policies:
     mist_worker:
       path: policies/mist-discovery-policy.yaml

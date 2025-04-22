@@ -1,7 +1,7 @@
 orb:
   labels:
-    agent: network
     environment: lab
+    color: red
   config_manager:
     active: git
     sources:

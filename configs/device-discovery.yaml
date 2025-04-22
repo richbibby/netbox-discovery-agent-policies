@@ -1,7 +1,7 @@
 orb:
   labels:
-    agent: device
     environment: lab
+    color: blue
   config_manager:
     active: git
     sources:
