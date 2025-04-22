@@ -1,5 +1,5 @@
 # Network Discovery Agent (agent01)
-# Scans and discovers network devices and topology
+# Scans and discovers networks
 agent01:
   selector:
     agent: network
